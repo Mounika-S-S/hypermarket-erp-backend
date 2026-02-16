@@ -1,0 +1,31 @@
+meta {
+  name: create product
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:5000/api/inventory
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMyMjU4YThiYTgwODEyYTQ5Zjc2ZCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTI1MDcwNSwiZXhwIjoxNzcxMzM3MTA1fQ.UYtQbiq3ttO6EYk0d5H_v3xOx7JdDls9fM325qQzeF8
+}
+
+body:json {
+  {
+    "name": "Rice",
+    "quantity": 100,
+    "unit": "KG",
+    "unitPrice": 50,
+    "branch": "69932a75731d0c5a75c2154e"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

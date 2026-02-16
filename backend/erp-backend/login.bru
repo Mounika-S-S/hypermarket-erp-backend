@@ -1,0 +1,32 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:5000/api/auth/login
+  body: json
+  auth: inherit
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Authorization: Bearer ba12cb3e304caa93fa316723e87d3103ba1b2e8cd60b99f765000baea132bd96f69a64c2ebdc6c49b7c35878c15eea766a28c650e9b471204e548ce60ab1b3e9
+}
+
+body:json {
+  {
+    "username": "admin",
+    "password": "123456"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

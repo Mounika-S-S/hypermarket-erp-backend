@@ -1,0 +1,31 @@
+meta {
+  name: create branch
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:5000/api/branches
+  body: json
+  auth: inherit
+}
+
+params:query {
+  : 
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMyMjU4YThiYTgwODEyYTQ5Zjc2ZCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTI1MDcwNSwiZXhwIjoxNzcxMzM3MTA1fQ.UYtQbiq3ttO6EYk0d5H_v3xOx7JdDls9fM325qQzeF8
+}
+
+body:json {
+  {
+    "name": "Branch 1"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

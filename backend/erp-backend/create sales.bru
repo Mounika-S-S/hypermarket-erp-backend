@@ -1,0 +1,33 @@
+meta {
+  name: create sales
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:5000/api/sales
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMyMjU4YThiYTgwODEyYTQ5Zjc2ZCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTI1MDcwNSwiZXhwIjoxNzcxMzM3MTA1fQ.UYtQbiq3ttO6EYk0d5H_v3xOx7JdDls9fM325qQzeF8
+}
+
+body:json {
+  {
+    "branchId": "69932a75731d0c5a75c2154e",
+    "items": [
+      {
+        "productId": "69932d2907e43022cd075c02",
+        "quantity": 5
+      }
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

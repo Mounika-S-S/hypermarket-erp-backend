@@ -1,0 +1,30 @@
+meta {
+  name: create user
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/api/users
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OTMyMjU4YThiYTgwODEyYTQ5Zjc2ZCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MTI1MDcwNSwiZXhwIjoxNzcxMzM3MTA1fQ.UYtQbiq3ttO6EYk0d5H_v3xOx7JdDls9fM325qQzeF8
+}
+
+body:json {
+  {
+    "username": "manager2",
+    "email": "manager2@hypermarket.com",
+    "password": "123456",
+    "role": "MANAGER"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
